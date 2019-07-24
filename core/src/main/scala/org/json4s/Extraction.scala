@@ -43,7 +43,7 @@ object Extraction {
     } catch {
       case e: MappingException => throw e
       case e: Exception =>
-        throw new MappingException("unknown error", e)
+        throw new MappingException(e.getMessage, e)
     }
   }
 
